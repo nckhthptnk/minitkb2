@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phần mềm thời gian biểu mini</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #fef7ff 0%, #f0f9ff 50%, #f7fee7 100%);
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .icon-bounce {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body class="h-full gradient-bg font-sans">
+    <div class="min-h-full">
+        <!-- Header -->
+        <header class="bg-white/70 backdrop-blur-md shadow-sm sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center py-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-br from-purple-200 to-pink-200 rounded-xl flex items-center justify-center">
+                            <span class="text-2xl">📅</span>
+                        </div>
+                        <h1 class="text-xl font-bold text-gray-800">Thời gian biểu mini</h1>
+                    </div>
+                    <nav class="hidden md:flex space-x-6">
+                        <a href="#features" class="text-gray-600 hover:text-purple-600 transition-colors">Tính năng</a>
+                        <a href="#about" class="text-gray-600 hover:text-purple-600 transition-colors">Về chúng tôi</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="text-center mb-16">
+                <div class="mb-6">
+                    <span class="text-6xl icon-bounce inline-block">📚</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Phần mềm thời gian biểu
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">mini</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                    Quản lý thời gian học tập hiệu quả với giao diện thân thiện và các tính năng thông minh
+                </p>
+                <button class="bg-gradient-to-r from-purple-300 to-pink-300 hover:from-purple-400 hover:to-pink-400 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Bắt đầu sử dụng
+                </button>
+            </div>
+
+            <!-- Features Section -->
+            <section id="features" class="mb-20">
+                <h3 class="text-3xl font-bold text-center text-gray-800 mb-12">Tính năng chính</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Thời khóa biểu chính khóa -->
+                    <div class="feature-card bg-white/60 p-6 rounded-2xl border border-purple-100 hover:border-purple-200">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-200 to-blue-300 rounded-xl flex items-center justify-center mb-4">
+                            <span class="text-2xl">📋</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Thời khóa biểu chính khóa</h4>
+                        <p class="text-gray-600 text-sm">Quản lý lịch học hàng tuần một cách trực quan và dễ dàng</p>
+                    </div>
+
+                    <!-- Lịch thi -->
+                    <div class="feature-card bg-white/60 p-6 rounded-2xl border border-pink-100 hover:border-pink-200">
+                        <div class="w-12 h-12 bg-gradient-to-br from-pink-200 to-pink-300 rounded-xl flex items-center justify-center mb-4">
+                            <span class="text-2xl">📝</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Lịch thi</h4>
+                        <p class="text-gray-600 text-sm">Theo dõi lịch kiểm tra và thi cử, không bao giờ bỏ lỡ</p>
+                    </div>
+
+                    <!-- To-do list -->
+                    <div class="feature-card bg-white/60 p-6 rounded-2xl border border-green-100 hover:border-green-200">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-200 to-green-300 rounded-xl flex items-center justify-center mb-4">
+                            <span class="text-2xl">✅</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">To-do list</h4>
+                        <p class="text-gray-600 text-sm">Danh sách công việc thông minh giúp bạn hoàn thành mọi nhiệm vụ</p>
+                    </div>
+
+                    <!-- Lịch trình cá nhân -->
+                    <div class="feature-card bg-white/60 p-6 rounded-2xl border border-yellow-100 hover:border-yellow-200">
+                        <div class="w-12 h-12 bg-gradient-to-br from-yellow-200 to-yellow-300 rounded-xl flex items-center justify-center mb-4">
+                            <span class="text-2xl">🗓️</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Lịch trình cá nhân</h4>
+                        <p class="text-gray-600 text-sm">Tùy chỉnh lịch trình riêng phù hợp với nhu cầu cá nhân</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Access -->
+            <section class="mb-20">
+                <div class="bg-white/50 rounded-3xl p-8 border border-purple-100">
+                    <h3 class="text-2xl font-bold text-center text-gray-800 mb-8">Truy cập nhanh</h3>
+                    <div class="grid md:grid-cols-4 gap-4">
+                        <button class="bg-gradient-to-br from-blue-200 to-blue-300 hover:from-blue-300 hover:to-blue-400 p-4 rounded-xl transition-all duration-300 transform hover:scale-105">
+                            <div class="text-2xl mb-2">📋</div>
+                            <div class="text-sm font-medium text-gray-700">Thời khóa biểu</div>
+                        </button>
+                        <button class="bg-gradient-to-br from-pink-200 to-pink-300 hover:from-pink-300 hover:to-pink-400 p-4 rounded-xl transition-all duration-300 transform hover:scale-105">
+                            <div class="text-2xl mb-2">📝</div>
+                            <div class="text-sm font-medium text-gray-700">Lịch thi</div>
+                        </button>
+                        <button class="bg-gradient-to-br from-green-200 to-green-300 hover:from-green-300 hover:to-green-400 p-4 rounded-xl transition-all duration-300 transform hover:scale-105">
+                            <div class="text-2xl mb-2">✅</div>
+                            <div class="text-sm font-medium text-gray-700">To-do list</div>
+                        </button>
+                        <button class="bg-gradient-to-br from-yellow-200 to-yellow-300 hover:from-yellow-300 hover:to-yellow-400 p-4 rounded-xl transition-all duration-300 transform hover:scale-105">
+                            <div class="text-2xl mb-2">🗓️</div>
+                            <div class="text-sm font-medium text-gray-700">Lịch cá nhân</div>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- About Us Section -->
+        <section id="about" class="bg-white/40 backdrop-blur-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Information about us</h3>
+                    <div class="w-20 h-1 bg-gradient-to-r from-purple-300 to-pink-300 mx-auto rounded-full"></div>
+                </div>
+                
+                <div class="max-w-5xl mx-auto">
+                    <!-- Project Info & Team -->
+                    <div class="bg-gradient-to-br from-purple-50/80 via-pink-50/80 to-blue-50/80 rounded-2xl p-8 border border-purple-200/50 shadow-lg backdrop-blur-sm">
+                        <div class="flex items-center justify-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full flex items-center justify-center">
+                                <span class="text-3xl">🏫</span>
+                            </div>
+                        </div>
+                        <p class="text-lg text-gray-700 text-center leading-relaxed mb-6">
+                            Phần mềm do nhóm nghiên cứu trường THPT Nguyễn Khuyến phát triển, 
+                            nhằm hỗ trợ học sinh quản lý thời gian học tập một cách hiệu quả và khoa học.
+                        </p>
+                        <p class="text-gray-600 text-center mb-10">
+                            Chúng tôi tin rằng việc quản lý thời gian tốt sẽ giúp các bạn học sinh đạt được 
+                            kết quả học tập tốt nhất và phát triển toàn diện.
+                        </p>
+                        
+                        <h4 class="text-xl font-bold text-gray-800 text-center mb-8">Đội ngũ phát triển</h4>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <!-- Supervisor -->
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-amber-200 to-orange-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-2xl">👨‍🏫</span>
+                                </div>
+                                <h5 class="text-lg font-semibold text-gray-800 mb-2">Nguyễn Thành Luân</h5>
+                                <p class="text-amber-600 font-medium text-sm">Người hướng dẫn</p>
+                            </div>
+                            
+                            <!-- Team Member 1 -->
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-2xl">👩‍💻</span>
+                                </div>
+                                <h5 class="text-lg font-semibold text-gray-800 mb-2">Trịnh Thị Ngọc Linh</h5>
+                                <p class="text-gray-600 text-sm">Thành viên phát triển</p>
+                            </div>
+                            
+                            <!-- Team Member 2 -->
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-pink-200 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-2xl">👩‍💻</span>
+                                </div>
+                                <h5 class="text-lg font-semibold text-gray-800 mb-2">Nguyễn Thị Thảo Yến</h5>
+                                <p class="text-gray-600 text-sm">Thành viên phát triển</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-white/60 backdrop-blur-sm border-t border-purple-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="text-center">
+                    <div class="flex items-center justify-center space-x-3 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-purple-200 to-pink-200 rounded-lg flex items-center justify-center">
+                            <span class="text-lg">📅</span>
+                        </div>
+                        <span class="text-lg font-semibold text-gray-800">Thời gian biểu mini</span>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                        © 2025 Trường THPT Nguyễn Khuyến. Phát triển bởi nhóm nghiên cứu học sinh.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add click functionality to quick access buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                const buttonText = this.textContent.trim();
+                if (buttonText.includes('Bắt đầu sử dụng')) {
+                    // Scroll to features section
+                    document.getElementById('features').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                } else if (buttonText.includes('Thời khóa biểu') || 
+                          buttonText.includes('Lịch thi') || 
+                          buttonText.includes('To-do list') || 
+                          buttonText.includes('Lịch cá nhân')) {
+                    // Show a friendly message for feature buttons
+                    const message = document.createElement('div');
+                    message.className = 'fixed top-4 right-4 bg-white border border-purple-200 rounded-lg p-4 shadow-lg z-50';
+                    message.innerHTML = `
+                        <div class="flex items-center space-x-2">
+                            <span class="text-purple-500">✨</span>
+                            <span class="text-gray-700">Tính năng "${buttonText}" sẽ sớm được phát triển!</span>
+                        </div>
+                    `;
+                    document.body.appendChild(message);
+                    
+                    setTimeout(() => {
+                        message.remove();
+                    }, 3000);
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99315172045ec7b2',t:'MTc2MTIyMzM4Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
